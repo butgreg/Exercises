@@ -62,3 +62,111 @@ This lab environment consists of a simulated network with multiple subnets, VLAN
 1. Document findings for each exercise, including identified issues, tools used, and resolution steps.
 2. Submit network diagrams showing updated configurations post-troubleshooting.
 3. Provide performance metrics for bandwidth and latency before and after optimization.
+
+
+
+# Traffic Control (`tc`) Commands for Network Impairments
+
+## **Commands to Introduce Impairments**
+
+### 1. Introduce Latency
+- Add a fixed delay to all packets on the `eth0` interface:
+  ```bash
+  tc qdisc add dev eth0 root netem delay 100ms
+  ```
+- Add variable latency (jitter) for more realism:
+  ```bash
+  tc qdisc add dev eth0 root netem delay 100ms 20ms distribution normal
+  ```
+
+---
+
+### 2. Simulate Packet Loss
+- Introduce a fixed percentage of packet loss:
+  ```bash
+  tc qdisc add dev eth0 root netem loss 10%
+  ```
+- Simulate bursty packet loss:
+  ```bash
+  tc qdisc add dev eth0 root netem loss 5% 25%
+  ```
+
+---
+
+### 3. Simulate Network Congestion
+- Limit bandwidth to 1Mbps:
+  ```bash
+  tc qdisc add dev eth0 root tbf rate 1mbit burst 32kbit latency 400ms
+  ```
+
+---
+
+### 4. Simulate Packet Corruption
+- Introduce random packet corruption:
+  ```bash
+  tc qdisc add dev eth0 root netem corrupt 1%
+  ```
+
+---
+
+### 5. Simulate Reordering of Packets
+- Reorder packets with a certain probability:
+  ```bash
+  tc qdisc add dev eth0 root netem delay 100ms reorder 25% 50%
+  ```
+
+---
+
+### 6. Simulate Duplication of Packets
+- Duplicate packets with a fixed probability:
+  ```bash
+  tc qdisc add dev eth0 root netem duplicate 2%
+  ```
+
+---
+
+## **Commands to Remove Impairments**
+
+### 1. Remove All Impairments
+- Delete all traffic control rules on the `eth0` interface:
+  ```bash
+  tc qdisc del dev eth0 root
+  ```
+
+---
+
+### 2. Modify an Existing Rule
+- Change the impairment (e.g., adjust latency to 200ms):
+  ```bash
+  tc qdisc change dev eth0 root netem delay 200ms
+  ```
+
+---
+
+### 3. List Current Configuration
+- View the current `tc` settings for troubleshooting:
+  ```bash
+  tc qdisc show dev eth0
+  ```
+
+---
+
+## **Examples in Practice**
+
+### 1. Simulate a Congested Network with Latency and Packet Loss
+```bash
+tc qdisc add dev eth0 root handle 1: netem delay 100ms loss 5%
+tc qdisc add dev eth0 parent 1:1 tbf rate 512kbit burst 32kbit latency 400ms
+```
+
+---
+
+### 2. Reset the Interface to Default (No Impairments)
+```bash
+tc qdisc del dev eth0 root
+```
+
+---
+
+These commands can be integrated into a lab environment via startup scripts or executed dynamically using `docker exec`.
+```
