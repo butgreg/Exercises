@@ -1,158 +1,174 @@
-# Troubleshooting Exercise Guide: Using linux_client1 as the Jump Station
+```markdown
+# Facilitator Troubleshooting Guide for Docker Environment
 
-## Objective
-Diagnose and resolve network issues using `linux_client1` as the central workstation. This guide follows the OSI model and incorporates both Docker-specific and traditional methods.
-
----
-
-## Setup Overview
-- **Jump Station**: `linux_client1` (192.168.10.100).
-- **Target Systems**: `linux_client2`, `dns_server`, `router`, `unauthorized_device`, and other network components.
-- **Tools**: `ping`, `traceroute`, `tcpdump`, `nmap`, `dig`, `nslookup`, and `arp-scan`.
-
----
-
-## Exercise Scenarios
-
-### Scenario 1: Identifying and Resolving IP Conflicts
-**Symptoms**:
-- Intermittent connectivity.
-- Duplicate IP warnings in logs.
-
-**Steps**:
-1. Scan the subnet for conflicts using `arp-scan`.
-2. Inspect the ARP cache.
-3. Identify and disconnect the unauthorized device in Docker or via traditional methods.
-
-**Expected Output**:
-- Conflicting IP and MAC addresses detected.
-
-**Resolution**:
-- Reassign conflicting IPs.
+## General Docker Commands
+- **List running containers**:
+  ```bash
+  docker ps
+  ```
+- **Inspect a container's details**:
+  ```bash
+  docker inspect <container_name>
+  ```
+- **Access a container's shell**:
+  ```bash
+  docker exec -it <container_name> bash
+  ```
+- **View container logs**:
+  ```bash
+  docker logs <container_name>
+  ```
+- **Restart a container**:
+  ```bash
+  docker restart <container_name>
+  ```
 
 ---
 
-### Scenario 2: Diagnosing DNS Resolution Issues
-**Symptoms**:
-- Hostnames fail to resolve.
+## Network Troubleshooting
 
-**Steps**:
-1. Test DNS resolution using `nslookup` or `dig`.
-2. Ping the DNS server to confirm connectivity.
-3. Inspect `dnsmasq.conf` and add missing entries.
+### Verify Network Connectivity
+- **List Docker networks**:
+  ```bash
+  docker network ls
+  ```
+- **Inspect a specific network**:
+  ```bash
+  docker network inspect <network_name>
+  ```
+- **Ping a container from another**:
+  ```bash
+  docker exec -it <source_container> ping <destination_ip>
+  ```
 
-**Expected Output**:
-- Correct DNS records resolve successfully.
-
-**Resolution**:
-- Restart the DNS server.
-
----
-
-### Scenario 3: Locating and Addressing Packet Loss
-**Symptoms**:
-- High packet loss between `linux_client1` and `linux_client2`.
-
-**Steps**:
-1. Use `ping` to test connectivity.
-2. Trace routes using `traceroute`.
-3. Check the router's routing table.
-
-**Expected Output**:
-- Packet loss pinpointed to the router.
-
-**Resolution**:
-- Update routing configurations in `bird.conf`.
+### Resolve IP Conflicts
+- **Scan for devices in a subnet**:
+  ```bash
+  docker exec -it linux_client1 arp-scan --interface=eth0 192.168.10.0/24
+  ```
+- **Check ARP cache**:
+  ```bash
+  docker exec -it linux_client1 arp -a
+  ```
 
 ---
 
-### Scenario 4: Debugging DHCP Allocation Problems
-**Symptoms**:
-- IP address not assigned to `linux_client2`.
+## DNS Troubleshooting
 
-**Steps**:
-1. Request a DHCP lease using `dhclient`.
-2. Verify the DHCP range in `dnsmasq.conf`.
-
-**Expected Output**:
-- DHCP offers fail due to insufficient range.
-
-**Resolution**:
-- Expand the DHCP range and restart the service.
-
----
-
-### Scenario 5: Investigating VLAN Misconfigurations
-**Symptoms**:
-- Devices in different VLANs cannot communicate.
-
-**Steps**:
-1. Verify VLAN routing rules in `bird.conf`.
-2. Use `tcpdump` to capture VLAN-tagged packets.
-
-**Expected Output**:
-- VLAN tags are misconfigured or missing.
-
-**Resolution**:
-- Correct VLAN configurations and reload the router.
+### Verify DNS Server Configuration
+- **Check `dnsmasq.conf`**:
+  ```bash
+  docker exec -it dns_server cat /etc/dnsmasq.conf
+  ```
+- **Test DNS resolution**:
+  ```bash
+  docker exec -it linux_client1 nslookup linux_server
+  ```
+- **Ping the DNS server**:
+  ```bash
+  docker exec -it linux_client1 ping 192.168.10.2
+  ```
 
 ---
 
-### Scenario 6: Detecting Unauthorized Devices
-**Symptoms**:
-- Unexpected devices appear on the network.
+## DHCP Troubleshooting
 
-**Steps**:
-1. Scan for devices using `nmap`.
-2. Identify the unauthorized device and block its IP.
-
-**Expected Output**:
-- Unauthorized device detected by its IP and MAC.
-
-**Resolution**:
-- Block the device using `iptables` or by disconnecting it.
-
----
-
-### Scenario 7: Resolving Latency Spikes
-**Symptoms**:
-- High latency between `traffic_gen1` and `traffic_gen_server`.
-
-**Steps**:
-1. Capture traffic using `tcpdump`.
-2. Analyze delays and bottlenecks.
-
-**Expected Output**:
-- Latency caused by congested links or misconfigurations.
-
-**Resolution**:
-- Adjust QoS or load balancing settings.
+### Check DHCP Allocations
+- **Request a DHCP lease manually**:
+  ```bash
+  docker exec -it linux_client2 dhclient -v eth0
+  ```
+- **Check `dnsmasq.conf` for DHCP range**:
+  ```bash
+  docker exec -it dns_server cat /etc/dnsmasq.conf
+  ```
+- **Restart DHCP server**:
+  ```bash
+  docker restart dns_server
+  ```
 
 ---
 
-### Scenario 8: Verifying Internet Connectivity
-**Symptoms**:
-- External websites are unreachable.
+## Routing and VLAN Troubleshooting
 
-**Steps**:
-1. Test external connectivity using `ping`.
-2. Verify NAT configuration on the router.
+### Verify Router Configuration
+- **Inspect BIRD configuration**:
+  ```bash
+  docker exec -it router cat /etc/bird/bird.conf
+  ```
+- **Check routing table**:
+  ```bash
+  docker exec -it router birdc show route
+  ```
+- **Reload BIRD**:
+  ```bash
+  docker exec -it router birdc configure
+  ```
 
-**Expected Output**:
-- NAT rules missing or incorrect.
-
-**Resolution**:
-- Add NAT rules using `iptables` and restart the router.
+### Trace Routes
+- **Traceroute to identify packet flow**:
+  ```bash
+  docker exec -it linux_client1 traceroute 192.168.20.100
+  ```
 
 ---
 
-## Deliverables
-1. **Logs**: Document command outputs and observations for each task.
-2. **Corrected Configurations**: Submit updated `bird.conf` and `dnsmasq.conf`.
-3. **Network Diagram**: Provide a diagram of the fixed topology.
+## Packet Inspection
+
+### Use `tcpdump`
+- **Capture packets on a specific interface**:
+  ```bash
+  docker exec -it router tcpdump -i eth0
+  ```
+- **Filter traffic by IP**:
+  ```bash
+  docker exec -it router tcpdump -i eth0 host 192.168.10.100
+  ```
 
 ---
 
-## Bonus Challenges
-1. Introduce new issues, such as incorrect gateways, and troubleshoot.
-2. Monitor traffic logs using `syslog` and `tcpdump`.
+## Monitoring Containers
+
+### Check Resource Usage
+- **View CPU and memory stats**:
+  ```bash
+  docker stats
+  ```
+
+### Check Logs
+- **Retrieve logs for debugging**:
+  ```bash
+  docker logs <container_name>
+  ```
+
+---
+
+## Simulating and Resolving Common Issues
+
+### Simulate Unauthorized Device
+- **Add an unauthorized container**:
+  ```bash
+  docker run -d --name unauthorized_device --network lan_network alpine sleep infinity
+  ```
+- **Block unauthorized device traffic**:
+  ```bash
+  docker exec -it router iptables -A INPUT -s <unauthorized_ip> -j DROP
+  ```
+
+### Resolve Connectivity Issues
+- **Check if a container is connected to the right network**:
+  ```bash
+  docker network inspect lan_network | grep <container_name>
+  ```
+- **Reconnect a container to a network**:
+  ```bash
+  docker network connect lan_network <container_name>
+  ```
+
+---
+
+## Facilitator Tips
+1. Use `linux_client1` as the primary diagnostic tool for all network and application issues.
+2. Save logs and output for future analysis.
+3. Verify configurations in `bird.conf` and `dnsmasq.conf` regularly to avoid misconfigurations.
+```
