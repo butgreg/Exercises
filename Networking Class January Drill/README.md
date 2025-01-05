@@ -4,6 +4,7 @@
 ## Setup Overview
 This lab environment consists of a simulated network with multiple subnets, VLANs, and devices. Key services include a router (BIRD), a DNS server (dnsmasq), a syslog server, Linux servers and clients, and traffic generators. Participants will use this setup to explore troubleshooting and performance monitoring.
 
+The lab was developed in a RedHat Enterprise Linux environment and it became evident that certain features will not work with some kernels. currently this lab runs best on Debian/Ubuntu environments.
 ---
 
 ## Part 1: Network Troubleshooting

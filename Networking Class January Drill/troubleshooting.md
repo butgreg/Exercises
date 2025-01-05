@@ -1,4 +1,3 @@
-```markdown
 # Facilitator Troubleshooting Guide for Docker Environment
 
 ## General Docker Commands
