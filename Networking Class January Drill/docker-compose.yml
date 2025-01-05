@@ -91,7 +91,8 @@ services:
     - NET_ADMIN
     command: bash -c "
       apt-get update &&
-      apt-get install -y sudo iproute2 netcat-traditional apt-utils \
+      apt-get upgrade -y &&
+      apt-get install -y kali-linux-default sudo iproute2 netcat-traditional apt-utils \
       tcpdump nmap dnsutils traceroute wireshark tshark iperf3 net-tools \
       arp-scan openssh-server &&
       useradd -m -s /bin/bash user &&
