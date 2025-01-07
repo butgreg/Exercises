@@ -47,7 +47,7 @@ services:
 
   dns_server:
     image: andyshinn/dnsmasq
-    container_nam254e: dns_server
+    container_name: dns_server
     cap_add:
       - NET_ADMIN
     networks:
