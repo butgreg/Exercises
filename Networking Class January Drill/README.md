@@ -7,6 +7,10 @@ This lab environment consists of a simulated network with multiple subnets, VLAN
 The lab was developed in a RedHat Enterprise Linux environment and it became evident that certain features will not work with some kernels. currently this lab runs best on Debian/Ubuntu environments.
 ---
 
+### PreRequisites - building the lab and logging into linux_client1
+- **Building the lab**: build the lab by downloading the entire project. Navigate to the main folder, and run the command `sudo docker compose up` to suppress the logging in the terminal, supply the `-d` option. give the lab 3-5 minutes to build as it will completely update a Kali image on the linux_client1 machine.
+- **logging into linux_client1**: after sufficient time has passed and all machines have been built, check the lab's status by running `sudo docker ps` and when ready, SSH into the `linux_client1` machine using credentials: `user` : `practicalexercise` or use the command `sudo docker exec -it linux_client1 bash`
+
 ## Part 1: Network Troubleshooting
 
 ### Exercise 1: Identifying and Resolving IP Conflicts
@@ -16,7 +20,7 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 ---
 
 ### Exercise 2: Diagnosing DNS Resolution Issues
-- **Scenario**: Devices in the `lan_network` cannot resolve the hostname of the `linux_server` (192.168.10.5).
+- **Scenario**: Devices in the `lan_network` cannot resolve the hostname of the `linux_server.lan` (192.168.20.5).
 - **Task**: Use `nslookup` or `dig` on `linux_client1` to troubleshoot DNS resolution. Verify the configuration of the `dnsmasq` server and suggest corrections if necessary.
 
 ---
@@ -39,9 +43,9 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 
 ---
 
-### Exercise 6: Investigating VLAN Misconfigurations
-- **Scenario**: Devices in `vlan1` and `lan_network` cannot communicate despite proper routing in `bird.conf`.
-- **Task**: Examine VLAN configurations on the router and ensure appropriate tagging. Use Wireshark to verify traffic is routed correctly.
+### Exercise 6: Investigating Routing Misconfigurations
+- **Scenario**: Devices in `vlan1` and `lan_network` cannot communicate due to misconfigurations in `bird.conf`.
+- **Task**: Use ping and traceroute to verify connectivity to 192.168.20.5. Identify the missing route in `bird.conf`.
 
 ---
 

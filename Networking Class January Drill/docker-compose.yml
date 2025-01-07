@@ -1,4 +1,3 @@
-version: '3.8'
 
 networks:
   lan_network:
@@ -28,7 +27,9 @@ networks:
 
 services:
   router:
-    image: alpine
+    build:
+      context: ./config/router
+      dockerfile: Dockerfile
     container_name: router
     privileged: true
     cap_add:
@@ -42,18 +43,11 @@ services:
         ipv4_address: 192.168.30.1
       wan_network:
         ipv4_address: 203.0.113.1
-    command: sh -c "
-      apk add --no-cache bird iproute2 &&
-      bird -c /etc/bird/bird.conf -d" &&
-      tc qdisc add dev eth0 root netem delay 100ms loss 10% &&
-      tail -f /dev/null
-    volumes:
-      - ./config/bird.conf:/etc/bird/bird.conf
     restart: always  # Ensures the container restarts if it stops
 
   dns_server:
     image: andyshinn/dnsmasq
-    container_name: dns_server
+    container_nam254e: dns_server
     cap_add:
       - NET_ADMIN
     networks:
@@ -65,23 +59,20 @@ services:
     restart: always  # Ensures the container restarts if it stops
 
   linux_server:
-    image: ubuntu
+    build:
+      context: ./config/linux_server
     container_name: linux_server
     networks:
       vlan1:
         ipv4_address: 192.168.20.5
     environment:
-      - APACHE_SERVER_NAME=192.168.10.5:80
-    command: bash -c "apt-get update &&
-      apt-get install -y iperf3 tcpdump netcat-traditional apache2 iproute2 &&
-      echo 'ServerName 192.168.20.5:80' >> /etc/apache2/apache2.conf &&
-      apache2ctl start &&
-      tail -f /dev/null"
-    restart: always  # Ensures the container restarts if it stops
+      - APACHE_SERVER_NAME=192.168.20.5:80
+    restart: always
 
 
   linux_client1:
-    image: kalilinux/kali-rolling
+    build:
+      context: ./config/linux_client1
     container_name: linux_client1
     environment:
       - DEBIAN_FRONTEND=noninteractive
@@ -89,19 +80,8 @@ services:
       lan_network:
         ipv4_address: 192.168.10.100
     cap_add:
-    - NET_ADMIN
-    command: bash -c "
-      apt-get update &&
-      apt-get full-upgrade -y &&
-      apt-get install -y inetutils-ping sudo iproute2 netcat-traditional apt-utils \
-      tcpdump nmap dnsutils traceroute wireshark tshark iperf3 net-tools \
-      arp-scan openssh-server &&
-      useradd -m -s /bin/bash user &&
-      echo 'user:practicalexercise' | chpasswd &&
-      echo 'user ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&
-      mkdir -p /var/run/sshd &&
-      /usr/sbin/sshd -D &&
-      bash"
+      - NET_ADMIN
+    restart: always
 
   linux_client2:
     image: kalilinux/kali-rolling
@@ -117,7 +97,8 @@ services:
       tail -f /dev/null"
 
   traffic_gen1:
-    image: networkstatic/iperf3
+    build:
+      context: ./config/traffic_gen
     container_name: traffic_gen1
     networks:
       lan_network:
@@ -133,7 +114,7 @@ services:
 
   traffic_gen2:
     build:
-      context: .
+      context: ./config/traffic_gen
     container_name: traffic_gen2
     networks:
       vlan1:
