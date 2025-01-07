@@ -1,86 +1,101 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="26.0.4">
   <diagram name="Page-1" id="rPjQCv6jWcPQ2KpjE6iu">
-    <mxGraphModel dx="1872" dy="948" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3120" dy="1580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="M9ytymhfDPs7FdStXxdQ-21" value="wan_network" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="65" y="70" width="360" height="250" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-19" value="vlan1&lt;div&gt;192.168.20.0/24&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="710" y="490" width="360" height="320" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-8" value="lan_network&lt;div&gt;192.168.10.0/24&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="810" y="58.82" width="360" height="320" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-2" value="linux_server&lt;div&gt;Services:&lt;br&gt;DNS (dnsmasq) 192.168.20.5&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/web_server.svg;" vertex="1" parent="1">
-          <mxGeometry x="914" y="450" width="72" height="90" as="geometry" />
+          <mxGeometry x="160" y="162" width="360" height="250" as="geometry" />
         </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-5" value="host network" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" vertex="1" parent="1">
-          <mxGeometry x="80" y="90" width="80" height="80" as="geometry" />
+          <mxGeometry x="175" y="182" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-6" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="160" y="620" as="sourcePoint" />
-            <mxPoint x="230" y="40" as="targetPoint" />
+            <mxPoint x="270" y="1060" as="sourcePoint" />
+            <mxPoint x="460" y="20" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-11" value="DNS&lt;div&gt;192.168.10.53&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
-          <mxGeometry x="810" y="223.82" width="67.2" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-12" value="linux_client1&lt;div&gt;192.168.10.100&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="1">
-          <mxGeometry x="780" y="78.82000000000001" width="92.5" height="108.82" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-13" value="syslog&lt;div&gt;192.168.20.250&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
-          <mxGeometry x="1050" y="570" width="48" height="85.71" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-14" value="linux_client2&lt;div&gt;192.168.20.100&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="1">
-          <mxGeometry x="710" y="490" width="92.5" height="108.82" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-16" value="traffic_gen1&lt;div&gt;192.168.10.101&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="1">
-          <mxGeometry x="950" width="92.5" height="108.82" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-17" value="traffic_gen_server&lt;div&gt;192.168.10.201&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
-          <mxGeometry x="1110.8" y="78.82" width="59.2" height="105.71" as="geometry" />
-        </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-20" value="vlan2&lt;div&gt;192.168.30.0/24&lt;br&gt;planned for future development&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1140" y="460" width="300" height="280" as="geometry" />
+          <mxGeometry x="1275" y="622" width="300" height="280" as="geometry" />
         </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-1" value="router" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" vertex="1" parent="1">
-          <mxGeometry x="380" y="170" width="80" height="80" as="geometry" />
+          <mxGeometry x="475" y="262" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-4" value="192.168.10.1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="470" y="170" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-23" value="traffic_gen2&lt;div&gt;192.168.20.101&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="1">
-          <mxGeometry x="957.5" y="720" width="92.5" height="108.82" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-24" value="traffic_gen_server&lt;div&gt;192.168.10.201&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
-          <mxGeometry x="1090" y="273.11" width="59.2" height="105.71" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-25" value="traffic_gen_server&lt;div&gt;192.168.20.250&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="1">
-          <mxGeometry x="800" y="730" width="59.2" height="105.71" as="geometry" />
-        </mxCell>
-        <mxCell id="M9ytymhfDPs7FdStXxdQ-26" value="&lt;span style=&quot;background-color: rgb(255, 28, 28);&quot;&gt;unauthorized_device&lt;/span&gt;" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" vertex="1" parent="1">
-          <mxGeometry x="940" y="328.82" width="80" height="80" as="geometry" />
+          <mxGeometry x="565" y="262" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-29" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.325;entryY=0.048;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="M9ytymhfDPs7FdStXxdQ-1" target="M9ytymhfDPs7FdStXxdQ-19">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="540" y="250" as="sourcePoint" />
-            <mxPoint x="740" y="510" as="targetPoint" />
+            <mxPoint x="635" y="342" as="sourcePoint" />
+            <mxPoint x="835" y="602" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-30" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="M9ytymhfDPs7FdStXxdQ-1" target="M9ytymhfDPs7FdStXxdQ-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="690" y="560" as="sourcePoint" />
-            <mxPoint x="740" y="510" as="targetPoint" />
+            <mxPoint x="785" y="652" as="sourcePoint" />
+            <mxPoint x="835" y="602" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="M9ytymhfDPs7FdStXxdQ-31" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="M9ytymhfDPs7FdStXxdQ-20" target="M9ytymhfDPs7FdStXxdQ-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="690" y="540" as="sourcePoint" />
-            <mxPoint x="540" y="390" as="targetPoint" />
+            <mxPoint x="785" y="632" as="sourcePoint" />
+            <mxPoint x="635" y="482" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-32" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1163" y="50" width="390" height="408.82" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-8" value="lan_network&lt;div&gt;192.168.10.0/24&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-32">
+          <mxGeometry x="30" y="58.82" width="360" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-11" value="DNS&lt;div&gt;192.168.10.53&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-32">
+          <mxGeometry x="30" y="223.82" width="67.2" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-12" value="linux_client1&lt;div&gt;192.168.10.100&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-32">
+          <mxGeometry y="78.82000000000001" width="92.5" height="108.82" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-16" value="traffic_gen1&lt;div&gt;192.168.10.101&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-32">
+          <mxGeometry x="170" width="92.5" height="108.82" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-17" value="traffic_gen_server&lt;div&gt;192.168.10.201&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-32">
+          <mxGeometry x="330.79999999999995" y="78.82" width="59.2" height="105.71" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-24" value="traffic_gen_server&lt;div&gt;192.168.10.201&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-32">
+          <mxGeometry x="310" y="273.11" width="59.2" height="105.71" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-26" value="&lt;span style=&quot;background-color: rgb(255, 28, 28);&quot;&gt;unauthorized_device&lt;/span&gt;" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-32">
+          <mxGeometry x="160" y="328.82" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-33" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="770" y="650" width="388" height="385.71000000000004" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-19" value="vlan1&lt;div&gt;192.168.20.0/24&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-33">
+          <mxGeometry y="40" width="360" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-2" value="linux_server&lt;div&gt;Services:&lt;br&gt;DNS (dnsmasq) 192.168.20.5&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/web_server.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-33">
+          <mxGeometry x="204" width="72" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-13" value="syslog&lt;div&gt;192.168.20.250&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-33">
+          <mxGeometry x="340" y="120" width="48" height="85.71" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-14" value="linux_client2&lt;div&gt;192.168.20.100&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-33">
+          <mxGeometry y="40" width="92.5" height="108.82" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-23" value="traffic_gen2&lt;div&gt;192.168.20.101&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/workstation_client.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-33">
+          <mxGeometry x="247.5" y="270" width="92.5" height="108.82" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-25" value="traffic_gen_server&lt;div&gt;192.168.20.250&lt;/div&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="M9ytymhfDPs7FdStXxdQ-33">
+          <mxGeometry x="90" y="280" width="59.2" height="105.71" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-34" value="HOST" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;" vertex="1" parent="1">
+          <mxGeometry x="70" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-36" value="DOCKER LAB" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;" vertex="1" parent="1">
+          <mxGeometry x="550" y="570" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M9ytymhfDPs7FdStXxdQ-37" value="Networking Class Network Diagram" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=33;fontStyle=5" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="300" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
