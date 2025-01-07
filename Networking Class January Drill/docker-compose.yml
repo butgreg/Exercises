@@ -68,13 +68,13 @@ services:
     image: ubuntu
     container_name: linux_server
     networks:
-      lan_network:
-        ipv4_address: 192.168.10.5
+      vlan1:
+        ipv4_address: 192.168.20.5
     environment:
       - APACHE_SERVER_NAME=192.168.10.5:80
     command: bash -c "apt-get update &&
       apt-get install -y iperf3 tcpdump netcat-traditional apache2 iproute2 &&
-      echo 'ServerName 192.168.10.5:80' >> /etc/apache2/apache2.conf &&
+      echo 'ServerName 192.168.20.5:80' >> /etc/apache2/apache2.conf &&
       apache2ctl start &&
       tail -f /dev/null"
     restart: always  # Ensures the container restarts if it stops
