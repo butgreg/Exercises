@@ -2,28 +2,33 @@
 networks:
   lan_network:
     driver: bridge
+    internal: true
     ipam:
       config:
         - subnet: 192.168.10.0/24
           gateway: 192.168.10.254
+          
   vlan1:
     driver: bridge
+    internal: true
     ipam:
       config:
         - subnet: 192.168.20.0/24
           gateway: 192.168.20.254
+          
   vlan2:
     driver: bridge
+    internal: true
     ipam:
       config:
         - subnet: 192.168.30.0/24
           gateway: 192.168.30.254
   wan_network:
     driver: bridge
+    internal: false
     ipam:
       config:
-        - subnet: 203.0.113.0/24
-          gateway: 203.0.113.254
+        - subnet: 192.168.136.0/24
 
 services:
   router:
@@ -41,8 +46,8 @@ services:
         ipv4_address: 192.168.20.1
       vlan2:
         ipv4_address: 192.168.30.1
-      wan_network:
-        ipv4_address: 203.0.113.1
+      wan_network: 
+        ipv4_address: 192.168.136.2
     restart: always  # Ensures the container restarts if it stops
 
   dns_server:
@@ -142,8 +147,8 @@ services:
     image: lscr.io/linuxserver/syslog-ng:latest
     container_name: syslog
     networks:
-      lan_network:
-        ipv4_address: 192.168.10.250
+      vlan1:
+        ipv4_address: 192.168.20.250
 
   unauthorized_device:
     image: alpine
