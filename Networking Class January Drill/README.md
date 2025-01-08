@@ -20,7 +20,7 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 
 ---
 
-### Exercise 2: Diagnosing DNS Resolution Issues
+### Exercise 2: Diagnosing DNS Resolution and Routing Issues
 - **Scenario**: Devices in the `lan_network` cannot resolve the hostname of the `linux_server.lan` (192.168.20.5).
 - **Task**: Use `nslookup` or `dig` on `linux_client1` to troubleshoot DNS resolution. Verify the configuration of the `dnsmasq` server and suggest corrections if necessary.
 
