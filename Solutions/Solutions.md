@@ -7,6 +7,8 @@
 
 ## Part 1: Network Troubleshooting
 
+        ---
+
 ### Exercise 1: Identifying and Resolving IP Conflicts
 - **Scenario**: The unauthorized device on the LAN network causes an IP conflict. As a result, Network connectivity for some devices is intermittent, and users cannot reliably SSH into `linux_client1`. 
 - **Task**: Use ARP commands and tools like `arping`, `tcpdump`, `iproute2` or `nmap` on `linux_client1` and `router` to identify conflicting IPs. Document the resolution steps and how to prevent such conflicts in the future.
@@ -87,3 +89,29 @@
         ```
         - Ensure `linux_client1` operates without conflict.
         ```
+
+        ---
+
+### Exercise 2: Diagnosing DNS Resolution and Routing Issues
+- **Scenario**: Devices in the `lan_network` cannot resolve the hostname of the `linux_server.lan` (192.168.20.5).
+- **Task**: Use `nslookup` or `dig` on `linux_client1` to troubleshoot DNS resolution. Verify the configuration of the `dnsmasq` server and suggest corrections if necessary.
+- **Solution**: The first replication of the problem is to log onto `linux_client1` and attempt to navigate to hostname `linux_server.lan` where it becomes evident that this does not resolve as intended. 
+        - `nslookup linux_server.lan` shows that the default configuration of 127.0.0.1 is still configured. this needs to be changed to 192.168.10.53 as indicated on the network map
+        - `nslookup linux_server.lan` now resolves the IP address from the dns server as 192.168.10.5 which is not what the network map says it should be.
+        - Pinging 192.168.10.5 results in 100% packet loss, pinging 192.168.20.5 is successful
+        - Log into `dns_server` using `sudo docker exec -it dns_server sh`
+        - This server uses dnsmasq to conduct dns services for the network. Perform `cat /etc/dnsmasq.conf` and notice the misconfigured entry "address=/linux_server.lan/192.168.10.5  # Incorrect IP address"
+        - to correct this use `vi /etc/dnsmasq.conf` and correct the ip address for `linux_server.lan` to 192.168.20.5.
+        - save and quit out of the dnsmasq.conf file and restart the dnsmasq process. Because this server is minimally configured and does not have systemd , just kill the process using `pkill dnsmasq` and restart it using `dnsmasq --conf-file=/etc/dnsmasq.conf` ignore the "dnsmasq: failed to bind DHCP server socket: Address in use" message
+        - `wget linux_server.lan` now properly resolves. 
+
+        ---
+
+### Exercise 3: Locating and Addressing Packet Loss
+- **Scenario**: `linux_client1` reports packet loss when communicating with `linux_client2`.
+- **Task**: Use `ping` and `traceroute` to identify where the packet loss occurs. Examine the router's configuration (`bird.conf`) for potential misconfigurations affecting routing.
+- **Solution**: linux_client2 is nearly identical to linux_client1, so this should be straightforward. Logging in
+
+
+        ---
+
