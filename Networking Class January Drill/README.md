@@ -37,6 +37,10 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 - **Scenario**: Video traffic simulated by the `traffic_gen1` container experiences high latency.
 - **Task**: Analyze traffic using `tcpdump` on `linux_server`. Propose and implement optimizations to reduce latency, such as verifying QoS or balancing load.
 
+
+## Add syslog exercise
+
+
 ---
 ## REMOVE THIS SECTION
 ### Exercise 5: Debugging DHCP Allocation Problems
