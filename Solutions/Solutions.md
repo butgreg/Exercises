@@ -104,14 +104,18 @@
         - to correct this use `vi /etc/dnsmasq.conf` and correct the ip address for `linux_server.lan` to 192.168.20.5.
         - save and quit out of the dnsmasq.conf file and restart the dnsmasq process. Because this server is minimally configured and does not have systemd , just kill the process using `pkill dnsmasq` and restart it using `dnsmasq --conf-file=/etc/dnsmasq.conf` ignore the "dnsmasq: failed to bind DHCP server socket: Address in use" message
         - `wget linux_server.lan` now properly resolves. 
+        - If we wanted, we could populate entries for the rest of the devices so that DNS is configured for more than just `linux_server.lan`
 
         ---
 
 ### Exercise 3: Locating and Addressing Packet Loss
 - **Scenario**: `linux_client1` reports packet loss when communicating with `linux_client2`.
 - **Task**: Use `ping` and `traceroute` to identify where the packet loss occurs. Examine the router's configuration (`bird.conf`) for potential misconfigurations affecting routing.
-- **Solution**: linux_client2 is nearly identical to linux_client1, so this should be straightforward. Logging in
-
-
+- **Solution**: linux_client2 is nearly identical to `linux_client1`, so this should be straightforward. since we have mostly corrected misconfigurations on `linux_client1` we begin by logging into `linux_client2` using docker `sudo docker exec -it linux_client2 bash`.
+        - On `linux_client2`, immediately pinging 192.168.10.100 results in the response "ping: sending packet: Network is unreachable" so we know this is a routing issue.
+        - `ip route show` reveals that, similar to `linux_client1`, there is no default route. when attempting to add the route using `ip route del 192.168.20.0/24 dev eth0 proto kernel scope link src 192.168.20.100 && ip route add default via 192.168.20.1 dev eth0` we receive "Error: Nexthop has invalid gateway." as a response. 
+        - `ip addr` reveals "inet 192.168.20.100/24 brd ***192.168.10.255*** scope global eth0" which indicates a misconfiguration of our broadcast domain for `linux_client2` even pinging our own gateway 192.168.20.1 would not work right now. This is the reason for the Nexthop has invalid gateway. 
+        - This bad configuration needs to be replaced. Issue the commands `ip addr del 192.168.20.100/24 dev eth0` followed by `ip addr add 192.168.20.100/24 brd 192.168.20.255 dev eth0` and we should now be able to ping our gateway.
+        - re-attempt `ip route add default via 192.168.20.1 dev eth0` and it should succeed. `linux_client1` and `linux_client2` are now able to ping eachother.
         ---
 
