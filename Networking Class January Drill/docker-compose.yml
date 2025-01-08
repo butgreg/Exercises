@@ -84,6 +84,7 @@ services:
     networks:
       lan_network:
         ipv4_address: 192.168.10.100
+        mac_address: 02:42:ac:11:00:02
     cap_add:
       - NET_ADMIN
     restart: always
@@ -156,11 +157,13 @@ services:
     networks:
       lan_network:
         ipv4_address: 192.168.10.80
+        mac_address: 02:42:de:ad:be:ef
     cap_add:
       - NET_ADMIN
       - NET_RAW
-    entrypoint: sh -c "sleep 60 && 
-      ip addr add 192.168.10.100/24 dev eth0 &&
+    entrypoint: sh -c "sleep 10 && 
+      ip addr flush dev eth0 &&
+      ip addr add 192.168.10.100/24 brd 192.168.10.255 dev eth0 &&
       echo 'Simulating unauthorized device with conflicting IP...' &&
       sleep infinity"
     restart: always  # Ensures the container restarts if it stops

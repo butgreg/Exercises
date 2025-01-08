@@ -10,12 +10,13 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 ### PreRequisites - building the lab and logging into linux_client1
 - **Building the lab**: build the lab by downloading the entire project. Navigate to the main folder, and run the command `sudo docker compose up` to suppress the logging in the terminal, supply the `-d` option. give the lab 3-5 minutes to build as it will completely update a Kali image on the linux_client1 machine.
 - **logging into linux_client1**: after sufficient time has passed and all machines have been built, check the lab's status by running `sudo docker ps` and when ready, SSH into the `linux_client1` machine using credentials: `user` : `practicalexercise` or use the command `sudo docker exec -it linux_client1 bash`
+- **logging into other devices**: To simulate physically logging into a machine for troubleshooting (like the router) use the docker interactive terminal command `sudo docker exec -it >>device<<` and supply the shell to use (`sh` or `bash` for example)
 
 ## Part 1: Network Troubleshooting
 
 ### Exercise 1: Identifying and Resolving IP Conflicts
-- **Scenario**: The unauthorized device on the LAN network causes an IP conflict. Network connectivity for some devices is intermittent.
-- **Task**: Use ARP commands and tools like `iproute2` or `nmap` on `linux_client1` to identify conflicting IPs. Document the resolution steps and how to prevent such conflicts in the future.
+- **Scenario**: The unauthorized device on the LAN network causes an IP conflict. As a result, Network connectivity for some devices is intermittent, and users cannot reliably SSH into `linux_client1`. 
+- **Task**: Use ARP commands and tools like `arping`, `tcpdump`, `iproute2` or `nmap` on `linux_client1` and `router` to identify conflicting IPs. Document the resolution steps and how to prevent such conflicts in the future.
 
 ---
 
