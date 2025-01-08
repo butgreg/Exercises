@@ -38,7 +38,7 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 - **Task**: Analyze traffic using `tcpdump` on `linux_server`. Propose and implement optimizations to reduce latency, such as verifying QoS or balancing load.
 
 ---
-
+## REMOVE THIS SECTION
 ### Exercise 5: Debugging DHCP Allocation Problems
 - **Scenario**: `linux_client2` fails to receive an IP address from the DHCP server.
 - **Task**: Inspect the DHCP server (`dnsmasq.conf`) configuration and logs. Confirm the DHCP ranges and client requests, resolving any misconfigurations.
@@ -58,18 +58,6 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 - **Task**: Use `iperf` to measure bandwidth consumption on `linux_server`. Identify top bandwidth consumers and recommend rate-limiting solutions.
 
 ---
-
-### Exercise 2: Identifying Traffic Bottlenecks
-- **Scenario**: Wireless clients connected to `vlan1` report slow connections, while wired clients in `lan_network` function normally.
-- **Task**: Use Wi-Fi Analyzer to assess wireless interference and iperf on wired connections to locate bottlenecks. Propose solutions such as additional access points or frequency adjustments.
-
----
-
-## Deliverables
-1. Document findings for each exercise, including identified issues, tools used, and resolution steps.
-2. Submit network diagrams showing updated configurations post-troubleshooting.
-3. Provide performance metrics for bandwidth and latency before and after optimization.
-
 
 
 # Traffic Control (`tc`) Commands for Network Impairments

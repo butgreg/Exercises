@@ -77,7 +77,6 @@ services:
       - APACHE_SERVER_NAME=192.168.20.5:80
     restart: always
 
-
   linux_client1:
     build:
       context: ./config/linux_client1
@@ -102,49 +101,49 @@ services:
     cap_add:
       - NET_ADMIN
     restart: always
-    
-  traffic_gen1:
-    build:
-      context: ./config/traffic_gen
-    container_name: traffic_gen1
-    networks:
-      lan_network:
-        ipv4_address: 192.168.10.101
-    cap_add:
-      - NET_ADMIN
-    entrypoint: sh -c "
-      sleep 10 &&
-      while true; do
-        iperf3 -c traffic_gen_server;
-        sleep 5;
-      done"
 
-  traffic_gen2:
-    build:
-      context: ./config/traffic_gen
-    container_name: traffic_gen2
-    networks:
-      vlan1:
-        ipv4_address: 192.168.20.101
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-    entrypoint: sh -c "
-      sleep 10 &&
-      while true; do
-        iperf3 -c 192.168.10.4;
-        sleep 5;
-      done"
-        
-  traffic_gen_server:
+  traffic_gen_server1:
     image: networkstatic/iperf3
-    container_name: traffic_gen_server
+    container_name: traffic_gen_server1
     networks:
       lan_network:
         ipv4_address: 192.168.10.201
     command: -s
     restart: always  # Ensures the container restarts if it stops
 
+  traffic_gen_server2:
+    image: networkstatic/iperf3
+    container_name: traffic_gen_server2
+    networks:
+      vlan1:
+        ipv4_address: 192.168.20.201
+    command: -s
+    restart: always  # Ensures the container restarts if it stops
+
+  traffic_gen1:
+    build:
+      context: ./config/traffic_gen1
+    container_name: traffic_gen1
+    privileged: true
+    networks:
+      lan_network:
+        ipv4_address: 192.168.10.101
+    cap_add:
+      - NET_ADMIN
+    restart: always
+
+  traffic_gen2:
+    build:
+      context: ./config/traffic_gen2
+    container_name: traffic_gen2
+    privileged: true
+    networks:
+      vlan1:
+        ipv4_address: 192.168.20.101
+    cap_add:
+      - NET_ADMIN
+    restart: always
+        
   syslog:
     image: lscr.io/linuxserver/syslog-ng:latest
     container_name: syslog
