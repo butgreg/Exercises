@@ -20,11 +20,11 @@
     - output should be 
     `linux_client1.networkingclassjanuarydrill_lan_network (192.168.10.100) at 02:42:de:ad:be:ef [ether]  on eth1`
     - Make a note of this MAC address for later.
-        # Resolving Unauthorized Device IP Conflict
+        #### Resolving Unauthorized Device IP Conflict
 
-        ## Steps to Resolve the IP Conflict
+        ##### Steps to Resolve the IP Conflict
 
-        ### 1. **Identify the Unauthorized Device**
+        ###### 1. **Identify the Unauthorized Device**
         - Use `arp` or `tcpdump` to find the MAC address of the device conflicting with `linux_client1`.
         ```bash
         arp -n | grep 192.168.10.100
@@ -35,7 +35,7 @@
         show mac address-table | include <MAC_ADDRESS>
         ```
 
-        ### 2. **Reconfigure the Unauthorized Device**
+        ###### 2. **Reconfigure the Unauthorized Device**
         - **Log In to the Device**:
         - Remove the conflicting IP.
             ```bash
@@ -47,7 +47,7 @@
             dhclient eth0
             ```
 
-        ### 3. **Block the Unauthorized Device**
+        ###### 3. **Block the Unauthorized Device**
         - If reconfiguration is not possible:
         - Block the MAC address at the router:
             ```bash
@@ -56,7 +56,7 @@
             ```
         - Physically disconnect the device.
 
-        ### 4. **Update Network Policies**
+        ###### 4. **Update Network Policies**
         - Reserve IPs using DHCP to avoid conflicts:
         ```
         host linux_client1 {
@@ -70,7 +70,7 @@
         Static: 192.168.10.10-192.168.10.99
         ```
 
-        ### 5. **Monitor the Network**
+        ###### 5. **Monitor the Network**
         - Install `arpwatch` to detect future conflicts:
         ```bash
         apt-get install arpwatch
@@ -80,7 +80,7 @@
         nmap -sP 192.168.10.0/24
         ```
 
-        ### 6. **Re-Verify the Network**
+        ###### 6. **Re-Verify the Network**
         - Confirm only one MAC is responding for `192.168.10.100`:
         ```bash
         arp -n
