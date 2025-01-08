@@ -14,9 +14,8 @@
 For devices with the same IP, incoming packets might be delivered to one or the other depending on the state of the ARP table on the sender. 
 Change the ip address of linux_client1
 `ip addr flush dev eth0`
-`ip a add 192.168.10.88/24 brd 192.168.10.255 dev eth0`
-
-then ping the ip address to load the arp table.
+`ip a add 192.168.10.88/24 brd 192.168.10.255 dev eth0` 
+ping the ip address to load the arp table.
 `ping 192.168.10.100`
 output should be 
 `linux_client1.networkingclassjanuarydrill_lan_network (192.168.10.100) at 02:42:de:ad:be:ef [ether]  on eth1`
