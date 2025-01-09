@@ -1,7 +1,7 @@
 FROM networkstatic/iperf3:latest
 
 # Install necessary tools for traffic control
-RUN apt-get update && apt-get install -y iproute2 iputils-ping
+# RUN apt-get update && apt-get install -y iproute2 iputils-ping
 
 # Add a startup script to simulate latency
 COPY startup.sh /usr/local/bin/startup.sh

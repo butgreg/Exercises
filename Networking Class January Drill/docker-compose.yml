@@ -101,21 +101,25 @@ services:
     restart: always
 
   traffic_gen_server1:
-    image: networkstatic/iperf3
+    build:
+      context: ./config/traffic_gen_server1
     container_name: traffic_gen_server1
     networks:
       lan_network:
         ipv4_address: 192.168.10.201
-    command: -s
-    restart: always  # Ensures the container restarts if it stops
+    cap_add:
+      - NET_ADMIN
+    restart: always
 
   traffic_gen_server2:
-    image: networkstatic/iperf3
+    build:
+      context: ./config/traffic_gen_server1
     container_name: traffic_gen_server2
     networks:
       vlan1:
         ipv4_address: 192.168.20.201
-    command: -s
+    cap_add:
+      - NET_ADMIN
     restart: always  # Ensures the container restarts if it stops
 
   traffic_gen1:

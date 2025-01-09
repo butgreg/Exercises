@@ -13,8 +13,8 @@ wait_for_interface() {
 wait_for_interface eth0
 
 # Apply traffic control rules
-echo "Applying traffic control rules..."
-tc qdisc add dev eth0 root netem delay 100ms loss 10%
+# echo "Applying traffic control rules..."
+# tc qdisc add dev eth0 root netem delay 100ms loss 10%
 
 # Apply sysctl settings
 sysctl -p /etc/sysctl.conf
