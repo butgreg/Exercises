@@ -23,6 +23,7 @@ networks:
       config:
         - subnet: 192.168.30.0/24
           gateway: 192.168.30.254
+
   wan_network:
     driver: bridge
     internal: false
@@ -113,7 +114,7 @@ services:
 
   traffic_gen_server2:
     build:
-      context: ./config/traffic_gen_server1
+      context: ./config/traffic_gen_server2
     container_name: traffic_gen_server2
     networks:
       vlan1:

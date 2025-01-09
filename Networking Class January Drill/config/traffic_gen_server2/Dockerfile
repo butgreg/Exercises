@@ -1,11 +1,10 @@
 FROM networkstatic/iperf3:latest
 
 # Install necessary tools for traffic control
-# RUN apt-get update && apt-get install -y iproute2 iputils-ping iperf3 tcpdump tshark
+RUN apt-get update && apt-get install -y iproute2 iputils-ping iperf3
 
-# Add a startup script to simulate latency
 COPY startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh
 
 # Use the script as the entrypoint
-ENTRYPOINT ["/usr/local/bin/startup.sh"]
+ENTRYPOINT ["./usr/local/bin/startup.sh"]
