@@ -170,4 +170,7 @@
 1. Use `linux_client1` as the primary diagnostic tool for all network and application issues.
 2. Save logs and output for future analysis.
 3. Verify configurations in `bird.conf` and `dnsmasq.conf` regularly to avoid misconfigurations.
+4. to apply simulated congestion to the outgoing WAN interface, find whatever host interface matches on 192.168.136.1/24 and issue the command `sudo tc qdisc del dev **device** root netem delay 100ms loss 10%`
+for example `sudo tc qdisc del dev br-c699f03594de root netem delay 100ms loss 10%`
+this will result in delay and lost packets for traffic out to the internet.
 ```
