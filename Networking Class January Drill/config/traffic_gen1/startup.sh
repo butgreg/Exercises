@@ -8,13 +8,13 @@ done
 # Set the default route
 ip route replace default via 192.168.10.1 dev eth0 metric 100
 
-apt-get update && apt-get install -y iproute2 iputils-ping iperf3
+apt-get update && apt-get install -y iproute2 iputils-ping iperf3 tcpdump tshark
 
 # Simulate network latency (100ms delay)
 tc qdisc add dev eth0 root netem delay 100ms
 
 # Start iperf3 client loop
-while true; do
-    iperf3 -c 192.168.20.201
-    sleep 5
-done
+# while true; do
+#     iperf3 -c 192.168.20.201
+#     sleep 5
+# done

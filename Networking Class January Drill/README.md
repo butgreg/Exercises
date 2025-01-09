@@ -35,7 +35,7 @@ The lab was developed in a RedHat Enterprise Linux environment and it became evi
 
 ### Exercise 4: Tracing and Resolving Latency Spikes
 - **Scenario**: Video traffic simulated by the `traffic_gen1` container experiences high latency.
-- **Task**: Analyze traffic using `tcpdump` on `linux_server`. Propose and implement optimizations to reduce latency, such as verifying QoS or balancing load.
+- **Task**: Analyze traffic using `tcpdump` on `trafficgen1`. Propose and implement optimizations to reduce latency, such as verifying QoS or balancing load.
 
 
 ## Add syslog exercise

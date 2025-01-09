@@ -51,17 +51,15 @@ services:
     restart: always  # Ensures the container restarts if it stops
 
   dns_server:
-    image: andyshinn/dnsmasq
+    build:
+      context: ./config/dns_server
     container_name: dns_server
     cap_add:
       - NET_ADMIN
     networks:
       lan_network:
         ipv4_address: 192.168.10.53
-    volumes:
-    - ./config/dnsmasq.conf:/etc/dnsmasq.conf
-    entrypoint: ["dnsmasq", "--conf-file=/etc/dnsmasq.conf", "--no-daemon"]
-    restart: always  # Ensures the container restarts if it stops
+    restart: always
 
   linux_server:
     build:

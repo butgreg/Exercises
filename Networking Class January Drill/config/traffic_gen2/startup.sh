@@ -12,7 +12,7 @@ ip route replace default via 192.168.20.1 dev eth0 metric 100
 apt-get update && apt-get install -y iproute2 iputils-ping iperf3
 
 # Start iperf3 client loop
-while true; do
-    iperf3 -c 192.168.10.201
-    sleep 5
-done
+# while true; do
+#     iperf3 -c 192.168.10.201
+#     sleep 5
+# done
