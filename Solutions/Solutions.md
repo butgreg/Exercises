@@ -23,19 +23,19 @@
     - Make a note of this MAC address for later.
 #### Resolving Unauthorized Device IP Conflict
 ###### Option 1. **Reconfigure the Unauthorized Device**
-    - **Log In to the Device**:
-    - Remove the conflicting IP.
-        ```bash
-        ip addr flush dev eth0
-        ip addr add 192.168.10.<new_ip>/24 dev eth0
-        ```
-    - Enable DHCP if static IP is not required:
-        ```bash
-        dhclient eth0
-        ```
+**Log In to the Device**:
+- Remove the conflicting IP.
+```bash
+    ip addr flush dev eth0
+    ip addr add 192.168.10.<new_ip>/24 dev eth0
+    ```
+- Enable DHCP if static IP is not required:
+    ```bash
+    dhclient eth0
+```
 
 ###### 2. **Block the Unauthorized Device**
-    - If reconfiguration is not possible:
+**If reconfiguration is not possible:**
     - Block the MAC address at the router:
         ```bash
         iptables -A INPUT -m mac --mac-source 02:42:de:ad:be:ef -j DROP
