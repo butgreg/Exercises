@@ -31,9 +31,6 @@ networks:
       config:
         - subnet: 192.168.136.0/24
 
-  switch:
-    external: true  # This connects all devices to the external bridge `br0`
-
 services:
   router:
     build:
@@ -53,22 +50,6 @@ services:
       wan_network: 
         ipv4_address: 192.168.136.2
     restart: always  # Ensures the container restarts if it stops
-
-  switch:
-    build:
-      context: ./config/switch
-      dockerfile: Dockerfile
-    container_name: switch
-    privileged: true
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-    networks:
-      - lan_network
-      - vlan1
-      - vlan2
-      - switch
-    restart: always
 
   dns_server:
     build:

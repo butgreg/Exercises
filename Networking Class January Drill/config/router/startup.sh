@@ -24,6 +24,7 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iptables -A FORWARD -i eth0 -o eth3 -j ACCEPT
 iptables -A FORWARD -i eth3 -o eth0 -j ACCEPT
 
+
 # Start BIRD
 bird -c /etc/bird/bird.conf -d
 

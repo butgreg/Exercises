@@ -1,4 +1,3 @@
-version: "3.8"
 
 networks:
   lan_network:
@@ -8,7 +7,7 @@ networks:
       config:
         - subnet: 192.168.10.0/24
           gateway: 192.168.10.254
-
+          
   vlan1:
     driver: bridge
     internal: true
@@ -16,7 +15,7 @@ networks:
       config:
         - subnet: 192.168.20.0/24
           gateway: 192.168.20.254
-
+          
   vlan2:
     driver: bridge
     internal: true
@@ -25,7 +24,7 @@ networks:
         - subnet: 192.168.30.0/24
           gateway: 192.168.30.254
 
-  wan_network:  # Add this section for the WAN network
+  wan_network:
     driver: bridge
     internal: false
     ipam:
@@ -33,25 +32,6 @@ networks:
         - subnet: 192.168.136.0/24
 
 services:
-  switch:
-    build:
-      context: ./config/switch
-      dockerfile: Dockerfile
-    container_name: switch
-    privileged: true
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-    networks:
-      lan_network:
-        ipv4_address: 192.168.10.2
-      vlan1:
-        ipv4_address: 192.168.20.2
-      vlan2:
-        ipv4_address: 192.168.30.2
-    restart: always
-    entrypoint: sh /usr/local/bin/startup.sh
-
   router:
     build:
       context: ./config/router
@@ -67,9 +47,9 @@ services:
         ipv4_address: 192.168.20.1
       vlan2:
         ipv4_address: 192.168.30.1
-      wan_network:
+      wan_network: 
         ipv4_address: 192.168.136.2
-    restart: always
+    restart: always  # Ensures the container restarts if it stops
 
   dns_server:
     build:
@@ -88,10 +68,12 @@ services:
     container_name: linux_server
     cap_add:
       - NET_ADMIN
-      - NET_RAW
+      - NET_RAW  # Allows the container to manipulate network interfaces
     networks:
       vlan1:
         ipv4_address: 192.168.20.5
+    environment:
+      - APACHE_SERVER_NAME=192.168.20.5:80
     restart: always
 
   linux_client1:
@@ -139,7 +121,7 @@ services:
         ipv4_address: 192.168.20.201
     cap_add:
       - NET_ADMIN
-    restart: always
+    restart: always  # Ensures the container restarts if it stops
 
   traffic_gen1:
     build:
@@ -164,6 +146,13 @@ services:
     cap_add:
       - NET_ADMIN
     restart: always
+        
+  syslog:
+    image: lscr.io/linuxserver/syslog-ng:latest
+    container_name: syslog
+    networks:
+      vlan1:
+        ipv4_address: 192.168.20.250
 
   unauthorized_device:
     image: alpine
@@ -175,9 +164,9 @@ services:
     cap_add:
       - NET_ADMIN
       - NET_RAW
-    entrypoint: sh -c "sleep 10 &&
+    entrypoint: sh -c "sleep 10 && 
       ip addr flush dev eth0 &&
       ip addr add 192.168.10.100/24 brd 192.168.10.255 dev eth0 &&
       echo 'Simulating unauthorized device with conflicting IP...' &&
       sleep infinity"
-    restart: always
+    restart: always  # Ensures the container restarts if it stops
