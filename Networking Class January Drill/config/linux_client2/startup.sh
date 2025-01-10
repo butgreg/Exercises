@@ -10,7 +10,8 @@ ip route del default
 # this line is wrong it should be 192.168.20.1
 ip route replace default via 192.168.10.1 dev eth0 metric 100 
 
-rsyslogd -n
+rsyslogd -n &
+
 
 # Start the SSH daemon in the foreground
 /usr/sbin/sshd -D

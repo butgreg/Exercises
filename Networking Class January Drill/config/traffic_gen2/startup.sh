@@ -9,11 +9,15 @@ done
 ip route del default
 ip route replace default via 192.168.20.1/24 dev eth0 metric 100
 
-rsyslogd -n
+rsyslogd -n &
 
-# # Start iperf3 client loop
-# while true; do
-#     iperf3 -c 192.168.10.201
-#     sleep 5
-# done
+# Install FTP client
+apt-get update && apt-get install -y wget
+
+# Download file in a loop
+while true; do
+    echo "Downloading largefile.dat from 192.168.20.5..."
+    wget -O /dev/null ftp://192.168.20.5/files/largefile.dat
+done
+
 tail -f /dev/null

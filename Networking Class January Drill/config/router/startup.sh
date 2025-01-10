@@ -14,7 +14,6 @@ wait_for_interface eth0
 
 # Apply traffic control rules
 # echo "Applying traffic control rules..."
-# tc qdisc add dev eth0 root netem delay 100ms loss 10%
 
 # Apply sysctl settings
 sysctl -p /etc/sysctl.conf
@@ -25,10 +24,17 @@ iptables -A FORWARD -i eth0 -o eth3 -j ACCEPT
 iptables -A FORWARD -i eth3 -o eth0 -j ACCEPT
 
 
-# Start BIRD
-bird -c /etc/bird/bird.conf -d
+# Start BIRD if not already running
+if ! pgrep -x "bird" > /dev/null; then
+    echo "Starting BIRD routing daemon..."
+    bird -c /etc/bird/bird.conf -d
+fi 
+#bird -c /etc/bird/bird.conf -d
 
-rsyslogd -n
+rsyslogd -n &
+
+tc qdisc add dev eth0 root netem rate 10mbit loss 25% delay 50ms 20ms 25%
+
 
 # Keep the container running
 tail -f /dev/null
