@@ -160,9 +160,6 @@ services:
     ports:
       - "514:514/udp"
       - "514:514/tcp"
-    volumes:
-      - ./config/syslog-ng:/config
-      - ./logs:/logs
     restart: always
 
   unauthorized_device:
