@@ -51,6 +51,6 @@ mkdir -p /run /var/run
 chmod 755 /run /var/run
 
 # Start syslog-ng in the foreground
-syslog-ng -F --no-caps -f /config/syslog-ng/syslog-ng.conf
+syslog-ng -F --no-caps -f /config/syslog-ng.conf
 
 echo "Successfully started"

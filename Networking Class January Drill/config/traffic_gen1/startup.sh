@@ -14,9 +14,9 @@ ip route replace default via 192.168.10.1 dev eth0 metric 100
 
 rsyslogd -n
 
-# Start iperf3 client loop
-while true; do
-    iperf3 -c 192.168.20.201
-    sleep 5
-done
+# # Start iperf3 client loop
+# while true; do
+#     iperf3 -c 192.168.20.201
+#     sleep 5
+# done
 tail -f /dev/null
