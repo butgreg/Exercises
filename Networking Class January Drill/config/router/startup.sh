@@ -28,5 +28,7 @@ iptables -A FORWARD -i eth3 -o eth0 -j ACCEPT
 # Start BIRD
 bird -c /etc/bird/bird.conf -d
 
+rsyslogd -n
+
 # Keep the container running
 tail -f /dev/null

@@ -20,6 +20,13 @@ EXPOSE 80
 COPY startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh
 
+
+# Install rsyslog
+RUN apt-get update && apt-get install -y rsyslog
+
+# Configure rsyslog to forward logs to the syslog server
+RUN echo '*.* @192.168.20.250:514' >> /etc/rsyslog.conf
+
 # Use the startup script as the container's entry point
 # Use the startup script and start Apache to keep the container running
 

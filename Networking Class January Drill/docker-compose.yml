@@ -148,11 +148,22 @@ services:
     restart: always
         
   syslog:
-    image: lscr.io/linuxserver/syslog-ng:latest
+    build:
+      context: ./config/syslog-ng
     container_name: syslog
     networks:
       vlan1:
         ipv4_address: 192.168.20.250
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+    ports:
+      - "514:514/udp"
+      - "514:514/tcp"
+    volumes:
+      - ./config/syslog-ng:/config
+      - ./logs:/logs
+    restart: always
 
   unauthorized_device:
     image: alpine

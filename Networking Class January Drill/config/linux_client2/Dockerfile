@@ -22,6 +22,13 @@ RUN mkdir -p /run/sshd && \
 # Expose SSH port 
 EXPOSE 22
 
+
+# Install rsyslog
+RUN apt-get update && apt-get install -y rsyslog
+
+# Configure rsyslog to forward logs to the syslog server
+RUN echo '*.* @192.168.20.250:514' >> /etc/rsyslog.conf
+
 # Copy the startup script into the container
 COPY startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh

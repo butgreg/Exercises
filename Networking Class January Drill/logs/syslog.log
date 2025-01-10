@@ -1,0 +1,324 @@
+Jan 10 02:09:34 3ede46d76c24 kernel: [260767.162581] eth0: renamed from veth348f0df
+Jan 10 02:12:56 3ede46d76c24 kernel: [260969.126488] br-a37fd81c801c: port 3(vethd2f1e82) entered blocking state
+Jan 10 02:12:56 3ede46d76c24 kernel: [260969.126493] br-a37fd81c801c: port 3(vethd2f1e82) entered disabled state
+Jan 10 02:12:56 3ede46d76c24 kernel: [260969.126504] vethd2f1e82: entered allmulticast mode
+Jan 10 02:12:56 3ede46d76c24 kernel: [260969.126579] vethd2f1e82: entered promiscuous mode
+Jan 10 02:12:56 3ede46d76c24 kernel: [260969.270919] eth0: renamed from vethae9813f
+Jan 10 02:12:56 3ede46d76c24 kernel: [260969.271815] br-a37fd81c801c: port 3(vethd2f1e82) entered blocking state
+Jan 10 02:12:56 3ede46d76c24 kernel: [260969.271819] br-a37fd81c801c: port 3(vethd2f1e82) entered forwarding state
+Jan 10 02:18:30 3ede46d76c24 kernel: [261303.131077] br-a37fd81c801c: port 3(vethb211040) entered blocking state
+Jan 10 02:18:30 3ede46d76c24 kernel: [261303.131091] vethb211040: entered allmulticast mode
+Jan 10 02:18:30 3ede46d76c24 kernel: [261303.131149] vethb211040: entered promiscuous mode
+Jan 10 02:18:53 192.168.10.100 1 2025-01-10T02:18:53.451544+00:00 50726cf6cae5 root - - [timeQuality tzKnown="1" isSynced="1" syncAccuracy="424000"] Test message from client
+Jan 10 02:19:42 192.168.10.100 1 2025-01-10T02:19:42.559399+00:00 50726cf6cae5 root - - [timeQuality tzKnown="1" isSynced="1" syncAccuracy="448500"] Test message from client
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.070436] br-76d0cf5193b6: port 1(vethd26f364) entered disabled state
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.070635] vetheca10ad: renamed from eth0
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.092312] br-76d0cf5193b6: port 1(vethd26f364) entered disabled state
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.093624] vethd26f364 (unregistering): left allmulticast mode
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.093666] vethd26f364 (unregistering): left promiscuous mode
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.093675] br-76d0cf5193b6: port 1(vethd26f364) entered disabled state
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.126540] br-76d0cf5193b6: port 1(veth62098d6) entered blocking state
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.126545] br-76d0cf5193b6: port 1(veth62098d6) entered disabled state
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.126554] veth62098d6: entered allmulticast mode
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.126617] veth62098d6: entered promiscuous mode
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.267184] eth0: renamed from vethb6da815
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.268325] br-76d0cf5193b6: port 1(veth62098d6) entered blocking state
+Jan 10 02:22:19 3ede46d76c24 kernel: [261532.268328] br-76d0cf5193b6: port 1(veth62098d6) entered forwarding state
+Jan 10 02:22:59 192.168.10.100 1 2025-01-10T02:22:59.883805+00:00 50726cf6cae5 root - - [timeQuality tzKnown="1" isSynced="1" syncAccuracy="547000"] Test message from client
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.534603] br-76d0cf5193b6: port 1(veth62098d6) entered disabled state
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.534806] vethb6da815: renamed from eth0
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.566669] br-76d0cf5193b6: port 1(veth62098d6) entered disabled state
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.567321] veth62098d6 (unregistering): left allmulticast mode
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.567324] veth62098d6 (unregistering): left promiscuous mode
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.567327] br-76d0cf5193b6: port 1(veth62098d6) entered disabled state
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.609143] br-76d0cf5193b6: port 1(veth7b64b9f) entered blocking state
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.609184] br-76d0cf5193b6: port 1(veth7b64b9f) entered disabled state
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.609197] veth7b64b9f: entered allmulticast mode
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.609271] veth7b64b9f: entered promiscuous mode
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.755817] eth0: renamed from vethd4b1fc3
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.757186] br-76d0cf5193b6: port 1(veth7b64b9f) entered blocking state
+Jan 10 02:23:02 3ede46d76c24 kernel: [261575.757191] br-76d0cf5193b6: port 1(veth7b64b9f) entered forwarding state
+Jan 10 02:23:10 928730292c0d : -- MARK --
+Jan 10 02:24:04 3ede46d76c24 kernel: [261637.453132] br-76d0cf5193b6: port 1(veth7b64b9f) entered disabled state
+Jan 10 02:24:04 3ede46d76c24 kernel: [261637.453361] vethd4b1fc3: renamed from eth0
+Jan 10 02:24:04 3ede46d76c24 kernel: [261637.474846] br-76d0cf5193b6: port 1(veth7b64b9f) entered disabled state
+Jan 10 02:24:04 3ede46d76c24 kernel: [261637.475737] veth7b64b9f (unregistering): left allmulticast mode
+Jan 10 02:24:04 3ede46d76c24 kernel: [261637.475740] veth7b64b9f (unregistering): left promiscuous mode
+Jan 10 02:24:04 3ede46d76c24 kernel: [261637.475743] br-76d0cf5193b6: port 1(veth7b64b9f) entered disabled state
+Jan 10 02:24:45 3ede46d76c24 kernel: [261678.790151] br-76d0cf5193b6: port 1(vethae9bc3b) entered blocking state
+Jan 10 02:24:45 3ede46d76c24 kernel: [261678.790156] br-76d0cf5193b6: port 1(vethae9bc3b) entered disabled state
+Jan 10 02:24:45 3ede46d76c24 kernel: [261678.790165] vethae9bc3b: entered allmulticast mode
+Jan 10 02:24:45 3ede46d76c24 kernel: [261678.790234] vethae9bc3b: entered promiscuous mode
+Jan 10 02:24:46 3ede46d76c24 kernel: [261678.935509] eth0: renamed from vethfe3560f
+Jan 10 02:24:46 3ede46d76c24 kernel: [261678.937102] br-76d0cf5193b6: port 1(vethae9bc3b) entered blocking state
+Jan 10 02:24:46 3ede46d76c24 kernel: [261678.937105] br-76d0cf5193b6: port 1(vethae9bc3b) entered forwarding state
+Jan 10 02:24:46 060afc419e90 rsyslogd: [origin software="rsyslogd" swVersion="8.2302.0" x-pid="10" x-info="https://www.rsyslog.com"] start
+Jan 10 02:26:12 3ede46d76c24 kernel: [261765.817044] br-76d0cf5193b6: port 1(vethae9bc3b) entered disabled state
+Jan 10 02:26:12 3ede46d76c24 kernel: [261765.817316] vethfe3560f: renamed from eth0
+Jan 10 02:26:13 3ede46d76c24 kernel: [261765.887747] br-76d0cf5193b6: port 1(vethae9bc3b) entered disabled state
+Jan 10 02:26:13 3ede46d76c24 kernel: [261765.888412] vethae9bc3b (unregistering): left allmulticast mode
+Jan 10 02:26:13 3ede46d76c24 kernel: [261765.888415] vethae9bc3b (unregistering): left promiscuous mode
+Jan 10 02:26:13 3ede46d76c24 kernel: [261765.888419] br-76d0cf5193b6: port 1(vethae9bc3b) entered disabled state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.528074] docker0: port 1(veth0a0a46e) entered blocking state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.528081] docker0: port 1(veth0a0a46e) entered disabled state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.528095] veth0a0a46e: entered allmulticast mode
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.528173] veth0a0a46e: entered promiscuous mode
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.628080] eth0: renamed from vethc328bda
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.628817] docker0: port 1(veth0a0a46e) entered blocking state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.628821] docker0: port 1(veth0a0a46e) entered forwarding state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.664815] docker0: port 1(veth0a0a46e) entered disabled state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.664926] vethc328bda: renamed from eth0
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.682953] docker0: port 1(veth0a0a46e) entered disabled state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.683511] veth0a0a46e (unregistering): left allmulticast mode
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.683514] veth0a0a46e (unregistering): left promiscuous mode
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.683517] docker0: port 1(veth0a0a46e) entered disabled state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.705278] docker0: port 1(veth7c3505c) entered blocking state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.705283] docker0: port 1(veth7c3505c) entered disabled state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.705315] veth7c3505c: entered allmulticast mode
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.705402] veth7c3505c: entered promiscuous mode
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.842284] eth0: renamed from veth4b06b6a
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.843895] docker0: port 1(veth7c3505c) entered blocking state
+Jan 10 02:26:33 3ede46d76c24 kernel: [261786.843898] docker0: port 1(veth7c3505c) entered forwarding state
+Jan 10 02:26:38 3ede46d76c24 kernel: [261791.827718] veth4b06b6a: renamed from eth0
+Jan 10 02:26:38 3ede46d76c24 kernel: [261791.841032] docker0: port 1(veth7c3505c) entered disabled state
+Jan 10 02:26:38 3ede46d76c24 kernel: [261791.842305] docker0: port 1(veth7c3505c) entered disabled state
+Jan 10 02:26:38 3ede46d76c24 kernel: [261791.842654] veth7c3505c (unregistering): left allmulticast mode
+Jan 10 02:26:38 3ede46d76c24 kernel: [261791.842658] veth7c3505c (unregistering): left promiscuous mode
+Jan 10 02:26:38 3ede46d76c24 kernel: [261791.842660] docker0: port 1(veth7c3505c) entered disabled state
+Jan 10 02:26:39 3ede46d76c24 kernel: [261791.884007] docker0: port 1(veth8159ca2) entered blocking state
+Jan 10 02:26:39 3ede46d76c24 kernel: [261791.884011] docker0: port 1(veth8159ca2) entered disabled state
+Jan 10 02:26:39 3ede46d76c24 kernel: [261791.884028] veth8159ca2: entered allmulticast mode
+Jan 10 02:26:39 3ede46d76c24 kernel: [261791.884097] veth8159ca2: entered promiscuous mode
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.024743] eth0: renamed from veth70ea2ac
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.025672] docker0: port 1(veth8159ca2) entered blocking state
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.025675] docker0: port 1(veth8159ca2) entered forwarding state
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.062699] docker0: port 1(veth8159ca2) entered disabled state
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.062831] veth70ea2ac: renamed from eth0
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.113884] docker0: port 1(veth8159ca2) entered disabled state
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.115131] veth8159ca2 (unregistering): left allmulticast mode
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.115197] veth8159ca2 (unregistering): left promiscuous mode
+Jan 10 02:26:39 3ede46d76c24 kernel: [261792.115212] docker0: port 1(veth8159ca2) entered disabled state
+Jan 10 02:26:47 3ede46d76c24 kernel: [261799.877361] br-76d0cf5193b6: port 1(veth38219b0) entered blocking state
+Jan 10 02:26:47 3ede46d76c24 kernel: [261799.877365] br-76d0cf5193b6: port 1(veth38219b0) entered disabled state
+Jan 10 02:26:47 3ede46d76c24 kernel: [261799.877374] veth38219b0: entered allmulticast mode
+Jan 10 02:26:47 3ede46d76c24 kernel: [261799.877435] veth38219b0: entered promiscuous mode
+Jan 10 02:26:47 3ede46d76c24 kernel: [261800.021541] eth0: renamed from veth2f89da2
+Jan 10 02:26:47 3ede46d76c24 kernel: [261800.022562] br-76d0cf5193b6: port 1(veth38219b0) entered blocking state
+Jan 10 02:26:47 3ede46d76c24 kernel: [261800.022567] br-76d0cf5193b6: port 1(veth38219b0) entered forwarding state
+Jan 10 02:26:47 9281e62ad075 rsyslogd: [origin software="rsyslogd" swVersion="8.2302.0" x-pid="9" x-info="https://www.rsyslog.com"] start
+Jan 10 02:27:27 3ede46d76c24 kernel: [261840.576674] br-76d0cf5193b6: port 1(veth38219b0) entered disabled state
+Jan 10 02:27:27 3ede46d76c24 kernel: [261840.576802] veth2f89da2: renamed from eth0
+Jan 10 02:27:27 3ede46d76c24 kernel: [261840.624326] br-76d0cf5193b6: port 1(veth38219b0) entered disabled state
+Jan 10 02:27:27 3ede46d76c24 kernel: [261840.625238] veth38219b0 (unregistering): left allmulticast mode
+Jan 10 02:27:27 3ede46d76c24 kernel: [261840.625241] veth38219b0 (unregistering): left promiscuous mode
+Jan 10 02:27:27 3ede46d76c24 kernel: [261840.625251] br-76d0cf5193b6: port 1(veth38219b0) entered disabled state
+Jan 10 02:27:31 3ede46d76c24 kernel: [261844.268774] br-76d0cf5193b6: port 1(veth147a108) entered blocking state
+Jan 10 02:27:31 3ede46d76c24 kernel: [261844.268779] br-76d0cf5193b6: port 1(veth147a108) entered disabled state
+Jan 10 02:27:31 3ede46d76c24 kernel: [261844.268796] veth147a108: entered allmulticast mode
+Jan 10 02:27:31 3ede46d76c24 kernel: [261844.268861] veth147a108: entered promiscuous mode
+Jan 10 02:27:31 3ede46d76c24 kernel: [261844.422223] eth0: renamed from vethae0c4f2
+Jan 10 02:27:31 3ede46d76c24 kernel: [261844.423176] br-76d0cf5193b6: port 1(veth147a108) entered blocking state
+Jan 10 02:27:31 3ede46d76c24 kernel: [261844.423180] br-76d0cf5193b6: port 1(veth147a108) entered forwarding state
+Jan 10 02:27:31 9281e62ad075 rsyslogd: [origin software="rsyslogd" swVersion="8.2302.0" x-pid="8" x-info="https://www.rsyslog.com"] start
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.739402] br-a37fd81c801c: port 5(vethf134f99) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.740212] vethec834e3: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.776367] vethec8539d: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.779412] vethd471270: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.781957] br-a37fd81c801c: port 3(vethb211040) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.782294] br-76d0cf5193b6: port 3(veth062bdd5) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.782677] br-76d0cf5193b6: port 2(vethb59e59a) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.782861] br-a95ff7d7b30e: port 1(veth0ae82f6) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.783019] br-a37fd81c801c: port 2(veth91ea141) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.783132] vethccc2a8d: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.783780] br-a37fd81c801c: port 4(vethe1cf1e3) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.784433] br-76d0cf5193b6: port 4(veth3e41b1f) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.803602] br-76d0cf5193b6: port 5(veth3d3e298) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.803883] veth6d68411: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.808796] br-76d0cf5193b6: port 1(veth147a108) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.833109] br-a37fd81c801c: port 1(veth83fba5b) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.833412] veth745070a: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.896208] veth3172a7c: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.940183] br-a37fd81c801c: port 5(vethf134f99) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.941911] vethf134f99 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.941915] vethf134f99 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.941918] br-a37fd81c801c: port 5(vethf134f99) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.943394] veth99c74a4: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261909.986619] vethf7bc1c3: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.056333] vethae0c4f2: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.093352] veth7cf5e74: renamed from eth0
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.126134] br-a95ff7d7b30e: port 1(veth0ae82f6) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.126691] veth0ae82f6 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.126695] veth0ae82f6 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.126703] br-a95ff7d7b30e: port 1(veth0ae82f6) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.157934] br-76d0cf5193b6: port 3(veth062bdd5) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.158448] veth062bdd5 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.158452] veth062bdd5 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.158454] br-76d0cf5193b6: port 3(veth062bdd5) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.163864] br-76d0cf5193b6: port 6(vethb9ddb4b) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.163962] vethaf4bdde: renamed from eth1
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.203091] br-a37fd81c801c: port 3(vethb211040) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.205290] vethb211040 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.205307] vethb211040 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.205336] br-a37fd81c801c: port 3(vethb211040) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.264440] br-a37fd81c801c: port 4(vethe1cf1e3) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.266116] vethe1cf1e3 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.266119] vethe1cf1e3 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.266123] br-a37fd81c801c: port 4(vethe1cf1e3) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.312050] br-76d0cf5193b6: port 4(veth3e41b1f) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.312364] veth3e41b1f (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.312367] veth3e41b1f (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.312370] br-76d0cf5193b6: port 4(veth3e41b1f) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.364586] br-76d0cf5193b6: port 5(veth3d3e298) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.366570] veth3d3e298 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.366573] veth3d3e298 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.366577] br-76d0cf5193b6: port 5(veth3d3e298) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.399941] br-76d0cf5193b6: port 2(vethb59e59a) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.400402] vethb59e59a (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.400406] vethb59e59a (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.400408] br-76d0cf5193b6: port 2(vethb59e59a) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.451865] br-a37fd81c801c: port 2(veth91ea141) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.452399] veth91ea141 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.452403] veth91ea141 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.452406] br-a37fd81c801c: port 2(veth91ea141) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.484173] br-76d0cf5193b6: port 1(veth147a108) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.484866] veth147a108 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.484870] veth147a108 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.484874] br-76d0cf5193b6: port 1(veth147a108) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.548973] br-76d0cf5193b6: port 6(vethb9ddb4b) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.549615] vethb9ddb4b (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.549618] vethb9ddb4b (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.549622] br-76d0cf5193b6: port 6(vethb9ddb4b) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.605029] br-a37fd81c801c: port 1(veth83fba5b) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.605547] veth83fba5b (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.605551] veth83fba5b (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.605625] br-a37fd81c801c: port 1(veth83fba5b) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.608395] br-a37fd81c801c: port 6(veth68aa036) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.608566] veth691d38a: renamed from eth2
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.651362] br-a37fd81c801c: port 6(veth68aa036) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.653125] veth68aa036 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.653134] veth68aa036 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.653166] br-a37fd81c801c: port 6(veth68aa036) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.692650] br-6f9e54317b7c: port 1(veth4c750e1) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.692790] veth827d40d: renamed from eth3
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.769127] br-6f9e54317b7c: port 1(veth4c750e1) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.769970] veth4c750e1 (unregistering): left allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.769974] veth4c750e1 (unregistering): left promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261910.769977] br-6f9e54317b7c: port 1(veth4c750e1) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.163053] br-f2110f532bb3: port 1(veth451c828) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.163058] br-f2110f532bb3: port 1(veth451c828) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.163083] veth451c828: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.163168] veth451c828: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.170302] br-d7efd483a842: port 1(veth513e4ad) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.170308] br-d7efd483a842: port 1(veth513e4ad) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.170337] veth513e4ad: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.170402] veth513e4ad: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.170999] br-f2110f532bb3: port 2(veth5beb1ff) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.171003] br-f2110f532bb3: port 2(veth5beb1ff) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.171021] veth5beb1ff: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.171080] veth5beb1ff: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.182446] br-d7efd483a842: port 2(vethb93e894) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.182451] br-d7efd483a842: port 2(vethb93e894) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.182470] vethb93e894: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.182535] vethb93e894: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.183003] br-f2110f532bb3: port 3(veth4b74c23) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.183007] br-f2110f532bb3: port 3(veth4b74c23) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.183033] veth4b74c23: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.183172] veth4b74c23: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.310341] br-d7efd483a842: port 3(veth8cc6448) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.310346] br-d7efd483a842: port 3(veth8cc6448) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.310414] veth8cc6448: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.310914] veth8cc6448: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.319022] br-f2110f532bb3: port 4(veth8cfa1f8) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.319028] br-f2110f532bb3: port 4(veth8cfa1f8) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.319064] veth8cfa1f8: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.319282] veth8cfa1f8: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.502538] br-d7efd483a842: port 4(vethdea530d) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.502543] br-d7efd483a842: port 4(vethdea530d) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.502559] vethdea530d: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.502631] vethdea530d: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.507368] br-f2110f532bb3: port 5(vethd728389) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.507375] br-f2110f532bb3: port 5(vethd728389) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.507774] vethd728389: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.508140] vethd728389: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.715457] br-d7efd483a842: port 5(veth82dedb5) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.715462] br-d7efd483a842: port 5(veth82dedb5) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.715479] veth82dedb5: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.715706] veth82dedb5: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.743586] eth0: renamed from vethd4c940f
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.775723] eth0: renamed from veth06637c6
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.776321] br-d7efd483a842: port 2(vethb93e894) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.776325] br-d7efd483a842: port 2(vethb93e894) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.847566] br-d7efd483a842: port 1(veth513e4ad) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.847572] br-d7efd483a842: port 1(veth513e4ad) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.902493] br-d7efd483a842: port 6(vethc9957fe) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.902498] br-d7efd483a842: port 6(vethc9957fe) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.902512] vethc9957fe: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.902574] vethc9957fe: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.903192] eth0: renamed from veth31c4c6c
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.903763] eth0: renamed from veth45f8a33
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.959807] br-f2110f532bb3: port 2(veth5beb1ff) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.959813] br-f2110f532bb3: port 2(veth5beb1ff) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.961999] eth0: renamed from vethdfe544b
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.964042] br-f2110f532bb3: port 1(veth451c828) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.964048] br-f2110f532bb3: port 1(veth451c828) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 rsyslogd: [origin software="rsyslogd" swVersion="8.2302.0" x-pid="10" x-info="https://www.rsyslog.com"] start
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.984109] br-f2110f532bb3: port 4(veth8cfa1f8) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.984115] br-f2110f532bb3: port 4(veth8cfa1f8) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.984207] eth0: renamed from vetha1d8d13
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.985384] br-f2110f532bb3: port 3(veth4b74c23) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.985389] br-f2110f532bb3: port 3(veth4b74c23) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.985913] br-c1aefbced39c: port 1(vethad5b170) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.985917] br-c1aefbced39c: port 1(vethad5b170) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.985934] vethad5b170: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261943.985995] vethad5b170: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.057416] eth0: renamed from vethaa06e51
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.182871] br-f2110f532bb3: port 6(veth7fac99b) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.182875] br-f2110f532bb3: port 6(veth7fac99b) entered disabled state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.182892] veth7fac99b: entered allmulticast mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.182937] veth7fac99b: entered promiscuous mode
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.183330] eth0: renamed from veth6f28bdb
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.186223] br-f2110f532bb3: port 5(vethd728389) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.186229] br-f2110f532bb3: port 5(vethd728389) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.236113] eth0: renamed from vethcdccb5c
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.237549] br-d7efd483a842: port 6(vethc9957fe) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.237554] br-d7efd483a842: port 6(vethc9957fe) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.343242] eth0: renamed from veth500c0e3
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.344695] br-30f91e577abc: port 1(veth625e5f6) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.399897] eth2: renamed from veth879cd89
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.400820] br-d7efd483a842: port 5(veth82dedb5) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.400825] br-d7efd483a842: port 5(veth82dedb5) entered forwarding state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.429707] eth3: renamed from veth954189c
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.432512] br-c1aefbced39c: port 1(vethad5b170) entered blocking state
+Jan 10 02:29:11 99bf76dc24c0 kernel: [261944.432527] br-c1aefbced39c: port 1(vethad5b170) entered forwarding state
+Jan 10 02:29:11 b9e72fedf4be rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
+Jan 10 02:29:11 b9e72fedf4be rsyslogd: activation of module imklog failed [v8.2412.0 try https://www.rsyslog.com/e/2145 ]
+Jan 10 02:29:11 b9e72fedf4be rsyslogd: [origin software="rsyslogd" swVersion="8.2412.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.060269] br-30f91e577abc: port 1(veth625e5f6) entered blocking state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.060274] br-30f91e577abc: port 1(veth625e5f6) entered disabled state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.060564] veth625e5f6: entered allmulticast mode
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.061352] veth625e5f6: entered promiscuous mode
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.062064] eth0: renamed from veth75bf56d
+Jan 10 02:29:11 e4525d3e5280 rsyslogd: [origin software="rsyslogd" swVersion="8.2302.0" x-pid="9" x-info="https://www.rsyslog.com"] start
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.065346] br-d7efd483a842: port 4(vethdea530d) entered blocking state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.065351] br-d7efd483a842: port 4(vethdea530d) entered forwarding state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.066617] br-d7efd483a842: port 3(veth8cc6448) entered blocking state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.066626] br-d7efd483a842: port 3(veth8cc6448) entered forwarding state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.344690] br-30f91e577abc: port 1(veth625e5f6) entered blocking state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.367803] eth1: renamed from vethd229cd1
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.368526] br-f2110f532bb3: port 6(veth7fac99b) entered blocking state
+Jan 10 02:29:11 e4525d3e5280 kernel: [261944.368531] br-f2110f532bb3: port 6(veth7fac99b) entered forwarding state
+Jan 10 02:29:11 a5fff59fbe18 : imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
+Jan 10 02:29:11 a5fff59fbe18 : activation of module imklog failed [v8.2012.0 try https://www.rsyslog.com/e/2145 ]
+Jan 10 02:29:11 a5fff59fbe18 : [origin software="rsyslogd" swVersion="8.2012.0" x-pid="8" x-info="https://www.rsyslog.com"] start
+Jan 10 02:29:11 268c067c29b0 rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
+Jan 10 02:29:11 268c067c29b0 rsyslogd: activation of module imklog failed [v8.2302.0 try https://www.rsyslog.com/e/2145 ]
+Jan 10 02:29:11 268c067c29b0 rsyslogd: [origin software="rsyslogd" swVersion="8.2302.0" x-pid="9" x-info="https://www.rsyslog.com"] start
+Jan 10 02:29:11 86e33ad7c6e1 rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
+Jan 10 02:29:11 86e33ad7c6e1 rsyslogd: activation of module imklog failed [v8.2412.0 try https://www.rsyslog.com/e/2145 ]
+Jan 10 02:29:11 86e33ad7c6e1 rsyslogd: [origin software="rsyslogd" swVersion="8.2412.0" x-pid="11" x-info="https://www.rsyslog.com"] start
+Jan 10 02:30:59 192.168.10.100 1 2025-01-10T02:30:59.014424+00:00 86e33ad7c6e1 root - - [timeQuality tzKnown="1" isSynced="1" syncAccuracy="787000"] Test message
+Jan 10 02:37:05 99bf76dc24c0 kernel: [262418.323363] eth2: entered promiscuous mode
+Jan 10 02:37:49 e4525d3e5280 kernel: [262462.276154] eth2: left promiscuous mode
+Jan 10 02:37:56 e4525d3e5280 kernel: [262469.226341] eth0: entered promiscuous mode
+Jan 10 02:37:58 e4525d3e5280 kernel: [262471.847928] eth0: left promiscuous mode
+Jan 10 02:38:01 e4525d3e5280 kernel: [262474.059736] eth1: entered promiscuous mode

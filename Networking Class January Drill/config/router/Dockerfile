@@ -15,5 +15,12 @@ COPY ./bird.conf /etc/bird/bird.conf
 COPY ./startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh
 
+
+# Install rsyslog
+RUN apk add --no-cache rsyslog
+
+# Configure rsyslog to forward logs to the syslog server
+RUN echo '*.* @192.168.20.250:514' >> /etc/rsyslog.conf
+
 # Run the startup script at container startup
 ENTRYPOINT ["/usr/local/bin/startup.sh"]

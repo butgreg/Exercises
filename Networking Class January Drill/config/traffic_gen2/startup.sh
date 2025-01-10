@@ -9,6 +9,7 @@ done
 ip route del default
 ip route replace default via 192.168.20.1/24 dev eth0 metric 100
 
+rsyslogd -n
 
 # Start iperf3 client loop
 while true; do
