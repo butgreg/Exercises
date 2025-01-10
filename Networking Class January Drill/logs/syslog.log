@@ -322,3 +322,16 @@ Jan 10 02:37:49 e4525d3e5280 kernel: [262462.276154] eth2: left promiscuous mode
 Jan 10 02:37:56 e4525d3e5280 kernel: [262469.226341] eth0: entered promiscuous mode
 Jan 10 02:37:58 e4525d3e5280 kernel: [262471.847928] eth0: left promiscuous mode
 Jan 10 02:38:01 e4525d3e5280 kernel: [262474.059736] eth1: entered promiscuous mode
+Jan 10 02:38:49 99bf76dc24c0 kernel: [262522.494961] eth1: left promiscuous mode
+Jan 10 02:38:57 e4525d3e5280 kernel: [262530.611412] eth3: entered promiscuous mode
+Jan 10 02:38:59 99bf76dc24c0 kernel: [262532.698785] eth3: left promiscuous mode
+Jan 10 02:40:03 3ec22b4e2c3b groupadd[164]: group added to /etc/group: name=messagebus, GID=104
+Jan 10 02:40:03 3ec22b4e2c3b groupadd[164]: group added to /etc/gshadow: name=messagebus
+Jan 10 02:40:03 3ec22b4e2c3b groupadd[164]: new group: name=messagebus, GID=104
+Jan 10 02:40:03 3ec22b4e2c3b useradd[170]: new user: name=messagebus, UID=102, GID=104, home=/nonexistent, shell=/usr/sbin/nologin, from=/dev/pts/1
+Jan 10 02:40:04 3ec22b4e2c3b groupadd[195]: group added to /etc/group: name=tcpdump, GID=105
+Jan 10 02:40:04 3ec22b4e2c3b groupadd[195]: group added to /etc/gshadow: name=tcpdump
+Jan 10 02:40:04 3ec22b4e2c3b groupadd[195]: new group: name=tcpdump, GID=105
+Jan 10 02:40:04 3ec22b4e2c3b useradd[203]: new user: name=tcpdump, UID=103, GID=105, home=/nonexistent, shell=/usr/sbin/nologin, from=/dev/pts/1
+Jan 10 02:40:18 99bf76dc24c0 kernel: [262611.172307] eth0: entered promiscuous mode
+Jan 10 02:40:21 e4525d3e5280 kernel: [262613.979289] eth0: left promiscuous mode
