@@ -21,7 +21,7 @@ apt-get update && apt-get install -y wget
 # Download file in a loop
 while true; do
     echo "Downloading largefile.dat from 192.168.20.5..."
-    wget -O /dev/null ftp://192.168.20.5/files/largefile.dat
+    wget -O /dev/null ftp://192.168.20.5/files/largefile.dat /tmp/largefile.dat
 done
 
 tail -f /dev/null

@@ -22,6 +22,8 @@ echo "anonymous_enable=YES" >> /etc/vsftpd.conf
 # Start vsftpd manually if systemctl is unavailable
 /usr/sbin/vsftpd &
 
+apachectl -D FOREGROUND &
+
 # Generate a large 2GB file
 while true; do
     if [ ! -f /srv/ftp/files/largefile.dat ]; then
